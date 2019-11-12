@@ -13,5 +13,27 @@
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <!-- -->
+    <servlet>
+        <servlet-name>LiveCycle</servlet-name>
+        <servlet-class>ServletLiveCycle</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>LiveCycle</servlet-name>
+    <url-pattern>/cycle</url-pattern>
+    </servlet-mapping>
     
+    <!-- -->
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>SessionServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
 </web-app>

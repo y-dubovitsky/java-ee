@@ -6,17 +6,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/**
+ * This is a simple servlet with web.xml configuration
+ */
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        for (int i = 0; i < 10; i++) {
-            try {
-                writer.write(i);
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        writer.write("Hello from " + this.getClass().getName());
     }
 }
