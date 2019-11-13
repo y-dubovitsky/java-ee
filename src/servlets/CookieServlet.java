@@ -1,3 +1,5 @@
+package servlets;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -88,7 +90,7 @@ public class CookieServlet extends HttpServlet {
     }
 
     /**
-     * Get some param from Person and add to the Cookie;
+     * Get some param from servlets.Person and add to the Cookie;
      * @param person
      * @return
      */

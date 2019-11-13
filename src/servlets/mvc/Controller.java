@@ -1,6 +1,6 @@
-package mvc;
+package servlets.mvc;
 
-import mvc.beans.Person;
+import servlets.mvc.beans.Person;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class Controller extends HttpServlet {
         Person person = model.getPerson();
         // Имя Параметра(Бина) должно быть таким же как и в view.jsp
         req.getSession().setAttribute("Bean", person);
-        RequestDispatcher rd = req.getRequestDispatcher("/jsp/mvc/view.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/jsp/servlets.mvc/view.jsp");
         rd.forward(req, resp);
     }
 }

@@ -11,7 +11,7 @@
     <title>This is the view</title>
 </head>
 <body>
-<jsp:useBean id="Bean" class= "mvc.beans.Person" scope="session"/>
+<jsp:useBean id="Bean" class= "servlets.mvc.beans.servlets.Person" scope="session"/>
 <jsp:getProperty name="Bean" property="name"/>
 </body>
 </html>

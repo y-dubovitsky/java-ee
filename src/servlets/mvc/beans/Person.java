@@ -1,4 +1,4 @@
-package mvc.beans;
+package servlets.mvc.beans;
 
 /**
  * Simple bean

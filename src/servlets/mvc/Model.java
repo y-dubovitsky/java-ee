@@ -1,6 +1,6 @@
-package mvc;
+package servlets.mvc;
 
-import mvc.beans.Person;
+import servlets.mvc.beans.Person;
 
 /**
  * This is a model class with one logic method, which return some Person;

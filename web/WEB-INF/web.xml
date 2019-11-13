@@ -6,7 +6,7 @@
     
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>HelloServlet</servlet-class>
+        <servlet-class>servlets.HelloServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -17,7 +17,7 @@
     <!-- -->
     <servlet>
         <servlet-name>LiveCycle</servlet-name>
-        <servlet-class>ServletLiveCycle</servlet-class>
+        <servlet-class>servlets.ServletLiveCycle</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -28,7 +28,7 @@
     <!-- -->
     <servlet>
         <servlet-name>SessionServlet</servlet-name>
-        <servlet-class>SessionServlet</servlet-class>
+        <servlet-class>servlets.SessionServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>

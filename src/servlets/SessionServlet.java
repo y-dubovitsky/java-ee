@@ -1,3 +1,5 @@
+package servlets;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +18,7 @@ public class SessionServlet extends HttpServlet {
         getSessionParam(req.getSession());
         HttpSession session = req.getSession();
         session.setAttribute("Person", new User("Caner Show"));
-        User user = (User) session.getAttribute("Person");
+        User user = (User) session.getAttribute("servlets.Person");
         System.out.println(user);
     }
 
