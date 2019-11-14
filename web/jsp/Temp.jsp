@@ -1,4 +1,4 @@
-<%--
+<%@ page import="jsp.JspTemp" %><%--
   Created by IntelliJ IDEA.
   User: user
   Date: 13.11.2019
@@ -12,10 +12,10 @@
 </head>
 <body>
 <H1>Hello World</H1>
-<!-- This is a decloration -->
+<!-- This is a declaration -->
 <%! private String gap = " To change this template use File | Settings | File Templates.\n;";%>
 
-<!-- This is a scriplet -->
+<!-- This is a scriptlet -->
 <%
 class Java {
     int version;
@@ -56,11 +56,12 @@ class Java {
 <%=new Java(11, "Matthey").toString()%>
 <%=new Java(11, gap).toString()%>
 
-<!-- This is a scriplet -->
+<!-- This is a scriptlet -->
 <% if (Math.random() > 0.5) { %>
     System.out.println("RANDOM");
 <%}; %>
 
+<!-- This is an declaration -->
 <%! class Body {
     private String somebody;
 
@@ -75,5 +76,29 @@ class Java {
 
 <!-- This is just like this: resp.getWriter.write(/// some text); -->
 <%= new Body("I like to move it move it").method("I sing a song")%>
+
+<!-- This is an declaration -->
+<%! class Nobody {
+    private String name;
+    private int age;
+
+    public Nobody(String str, int age) {
+        this.name = str;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " " + age;
+    }
+}%>
+
+<!-- This is an expression -->
+<%= new Nobody("Nobody", 1_1_1_1)%>
+
+<!-- How we can use package jsp.JspTemp -->
+<%= JspTemp.output()%>
+
+<H1> This is the end =) oooo =)</H1>
 </body>
 </html>
