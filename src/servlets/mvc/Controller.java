@@ -25,9 +25,14 @@ public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Person person = model.getPerson();
+        Person person1 = model.getPerson();
+        Person person3 = model.getPerson();
         // Имя Параметра(Бина) должно быть таким же как и в view.jsp
-        req.getSession().setAttribute("Bean", person);
-        RequestDispatcher rd = req.getRequestDispatcher("/jsp/servlets.mvc/view.jsp");
+        req.getSession().setAttribute("person", person);
+        req.getServletContext().setAttribute("person1", person1);
+        // Как я понимаю области видимости только эта страница scope="page"
+        req.setAttribute("person3", person3);
+        RequestDispatcher rd = req.getRequestDispatcher("/servlets/mvc/view.jsp");
         rd.forward(req, resp);
     }
 }
