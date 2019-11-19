@@ -13,8 +13,15 @@ import java.util.Enumeration;
  * Этот класс показывает как работать с сессиями! Сессия - хранится на сервере.
  */
 public class SessionServlet extends HttpServlet {
+
+    //TODO Я думаю, что так неправильно, потому что для каждого пользователя, запроса своя ссессия, а сервлет
+    // один для всех. И получается что и сессия одна для всех!
+    // Но мне просто для тестирования SessionListener_a
+    private HttpSession session;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setSession(req); // set session!
         getSessionParam(req.getSession());
         HttpSession session = req.getSession();
         session.setAttribute("Person", new User("Caner Show"));
@@ -27,14 +34,38 @@ public class SessionServlet extends HttpServlet {
      * @param session
      */
     private void getSessionParam(HttpSession session) {
-        System.out.println(session.getId());
-        System.out.println(session.getCreationTime());
-        System.out.println(session.getMaxInactiveInterval());
-        ServletContext context = session.getServletContext();
+        Enumeration<String> attributeNames = session.getAttributeNames();
+        while (attributeNames.hasMoreElements()) {
+            String name = attributeNames.nextElement();
+            System.out.println("Session param " + name + " : " + session.getAttribute(name));
+        }
+    }
+
+    /**
+     * Get all context Parameters
+     * @param context
+     */
+    private void getContextParam(ServletContext context) {
         Enumeration<String> attributeNames = context.getAttributeNames();
         while (attributeNames.hasMoreElements()) {
             System.out.println(attributeNames.nextElement());
         }
+    }
+
+    /**
+     * This is just setter
+     * @param req
+     */
+    public void setSession(HttpServletRequest req) {
+        this.session = req.getSession();
+    }
+
+    /**
+     * This method invokes when servlet stops to work;
+     */
+    @Override
+    public void destroy() {
+        session.invalidate();
     }
 
     //TODO Не помню чем отличается от обычного.. ну там помню, типа имеет доступ к статик полям и т.д.
