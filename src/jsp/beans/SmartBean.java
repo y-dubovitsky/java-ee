@@ -4,7 +4,7 @@ package jsp.beans;
  * Этот бин нужен для показа того, как внедрять другой Бин!
  */
 public class SmartBean {
-    public Runnable runnable;
+    private Runnable runnable;
 
     public void start() {
         runnable.run();
