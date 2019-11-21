@@ -1,9 +1,12 @@
 package cdi.beans;
 
+import cdi.annotations.PersonAnnotation;
+
 /**
  * Simple bean
  */
-public class Person {
+@PersonAnnotation
+public class Person implements Humanable{
 
     private String name;
     private int age;

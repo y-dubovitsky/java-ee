@@ -8,22 +8,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Этот класс показывает как использовать dependencies injection;
+ */
 @WebServlet("/di")
 public class DIExample extends HttpServlet {
 
     @Inject
-    Student person;
+    Injected injected;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(person.getName());
+        System.out.println(injected.getName());
     }
 }
 
-class Student {
-
+/**
+ * класс, специально для инжекта
+ */
+class Injected {
     private String name;
-
 
     public String getName() {
         return name;
@@ -33,3 +37,5 @@ class Student {
         this.name = name;
     }
 }
+
+
