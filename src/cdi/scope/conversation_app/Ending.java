@@ -16,7 +16,8 @@ public class Ending extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(bean.name);
+        System.out.println("Ending " + bean.name);
         bean.endConversation();
+        System.out.println("One more ending " + bean.name);
     }
 }

@@ -5,6 +5,11 @@ import javax.enterprise.context.ConversationScoped;
 import javax.inject.Inject;
 import java.io.Serializable;
 
+/**
+ * Тут вся фишка в чем, что когда мы начинаем         conversation.begin();
+ * когда мы делаем name = "Begin" мы работаем с уже другим бином, грубо говоря с Conversation Bean,
+ * и этот бин, не имеет ниего общего с бином вне Conversation!
+ */
 @ConversationScoped
 public class Bean implements Serializable {
 
