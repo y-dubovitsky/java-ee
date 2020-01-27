@@ -169,4 +169,14 @@
     <listener>
         <listener-class>listener.ContextListener</listener-class>
     </listener>
+
+    <!-- JSP Settings : cdi/expression_language/GetNamedBean.jsp SETTINGS -->
+    <servlet>
+        <servlet-name>GetNamedBean</servlet-name>
+        <jsp-file>/cdi/expression_language/GetNamedBean.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetNamedBean</servlet-name>
+        <url-pattern>/get_named_bean</url-pattern>
+    </servlet-mapping>
 </web-app>
