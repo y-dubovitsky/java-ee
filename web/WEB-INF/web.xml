@@ -3,37 +3,37 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    
+
     <!-- Initialize servlet -->
     <servlet>
-        <servlet-name>Index</servlet-name>
-        <servlet-class>servlets.Index</servlet-class>
+        <servlet-name>Init</servlet-name>
+        <servlet-class>ee.servlets.Index</servlet-class>
         <init-param>
-            <param-name>init</param-name>
-            <param-value>initialization</param-value>
+            <param-name>1</param-name>
+            <param-value>1</param-value>
         </init-param>
         <init-param>
-            <param-name>first</param-name>
-            <param-value>first</param-value>
+            <param-name>2</param-name>
+            <param-value>2</param-value>
         </init-param>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Index</servlet-name>
-        <url-pattern>/initServlet</url-pattern>
+        <servlet-name>Init</servlet-name>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
 
     <!-- JSP INIT -->
     <servlet>
         <servlet-name>jspInit</servlet-name>
-        <jsp-file>/jsp/Index.jsp</jsp-file>
+        <jsp-file>/ee.jsp/Index.ee.jsp</jsp-file>
         <init-param>
             <param-name>jspOne</param-name>
-            <param-value>first init jsp param</param-value>
+            <param-value>first init ee.jsp param</param-value>
         </init-param>
         <init-param>
             <param-name>jspTwo</param-name>
-            <param-value>second init jsp param</param-value>
+            <param-value>second init ee.jsp param</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
@@ -44,7 +44,7 @@
     <!-- FirstServlet -->
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>servlets.HelloServlet</servlet-class>
+        <servlet-class>ee.servlets.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
@@ -60,17 +60,17 @@
     <!-- LiveCycle Servlet -->
     <servlet>
         <servlet-name>LiveCycle</servlet-name>
-        <servlet-class>servlets.ServletLiveCycle</servlet-class>
+        <servlet-class>ee.servlets.ServletLiveCycle</servlet-class>
     </servlet>
     <servlet-mapping>
-    <servlet-name>LiveCycle</servlet-name>
-    <url-pattern>/cycle</url-pattern>
+        <servlet-name>LiveCycle</servlet-name>
+        <url-pattern>/cycle</url-pattern>
     </servlet-mapping>
-    
+
     <!-- SessionServlet -->
     <servlet>
         <servlet-name>SessionServlet</servlet-name>
-        <servlet-class>servlets.SessionServlet</servlet-class>
+        <servlet-class>ee.servlets.SessionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SessionServlet</servlet-name>
@@ -79,21 +79,21 @@
 
     <!-- Starting files -->
     <welcome-file-list>
-        <welcome-file>/html/start.html</welcome-file>
+        <welcome-file>/WEB-INF/html/start.html</welcome-file>
     </welcome-file-list>
-    
+
     <!-- Error page -->
     <error-page>
         <exception-type>javax.servlet.ServletException</exception-type>
-        <location>/jsp/ErrorPage.jsp</location>
+        <location>/WEB-INF/jsp/ErrorPage.jsp</location>
     </error-page>
-    
+
     <!-- JSP Config -->
     <jsp-config>
         <jsp-property-group>
-            <url-pattern>/jsp/page/Page.jsp</url-pattern>
-            <include-prelude>/jsp/page/Header.jsp</include-prelude>
-            <include-coda>/jsp/page/Footer.jsp</include-coda>
+            <url-pattern>/ee.jsp/page/Page.ee.jsp</url-pattern>
+            <include-prelude>/WEB-INF/jsp/page/Header.jsp</include-prelude>
+            <include-coda>/WEB-INF/jsp/page/Footer.jsp</include-coda>
         </jsp-property-group>
     </jsp-config>
 
@@ -101,7 +101,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>secureAuthJsp</web-resource-name>
-            <url-pattern>/jsp/auth/*</url-pattern>
+            <url-pattern>/ee.jsp/auth/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>murder</role-name>
@@ -129,15 +129,15 @@
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
-            <form-login-page>/jsp/auth/LoginForm.jsp</form-login-page>
-            <form-error-page>/jsp/ErrorPage.jsp</form-error-page>
+            <form-login-page>/WEB-INF/jsp/auth/LoginForm.jsp</form-login-page>
+            <form-error-page>/WEB-INF/jsp/ErrorPage.jsp</form-error-page>
         </form-login-config>
     </login-config>
-    
+
     <!-- Role Servlet -->
     <servlet>
         <servlet-name>Role</servlet-name>
-        <servlet-class>servlets.RoleServlet</servlet-class>
+        <servlet-class>ee.servlets.RoleServlet</servlet-class>
         <security-role-ref>
             <role-name>Great Murder</role-name>
             <role-link>murder</role-link>
@@ -151,10 +151,10 @@
     <!-- Filter
     <filter>
         <filter-name>Filter</filter-name>
-        <filter-class>servlets.Filter</filter-class>
+        <filter-class>ee.servlets.Filter</filter-class>
         <init-param>
             <param-name>namespace</param-name>
-            <param-value>servlets.mvc.beans.Person</param-value>
+            <param-value>ee.servlets.mvc.beans.Person</param-value>
         </init-param>
     </filter>
     <filter-mapping>
@@ -167,13 +167,13 @@
 
     <!-- Listeners -->
     <listener>
-        <listener-class>listener.ContextListener</listener-class>
+        <listener-class>ee.listener.ContextListener</listener-class>
     </listener>
 
-    <!-- JSP Settings : cdi/expression_language/GetNamedBean.jsp SETTINGS -->
+    <!-- JSP Settings : ee.cdi/expression_language/GetNamedBean.ee.jsp SETTINGS -->
     <servlet>
         <servlet-name>GetNamedBean</servlet-name>
-        <jsp-file>/cdi/expression_language/GetNamedBean.jsp</jsp-file>
+        <jsp-file>/ee.cdi/expression_language/GetNamedBean.ee.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetNamedBean</servlet-name>

@@ -7,6 +7,6 @@
         bean-discovery-mode="all">
     <!-- Альтернатива для внедрения -->
     <alternatives>
-        <class>cdi.beans.Player</class>
+        <class>ee.cdi.beans.Player</class>
     </alternatives>
 </beans>
