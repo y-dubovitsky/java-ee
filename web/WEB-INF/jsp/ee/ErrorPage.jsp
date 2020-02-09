@@ -36,7 +36,7 @@
     %>
     <%-- invoke method --%>
     <%
-        readHtmlFile(new File("C:\\Users\\user\\IdeaProjects\\java_ee\\web\\html\\error.html"), response);
+        readHtmlFile(new File("C:\\Users\\user\\IdeaProjects\\java_ee\\web\\WEB-INF\\html\\error.html"), response);
     %>
 </body>
 </html>

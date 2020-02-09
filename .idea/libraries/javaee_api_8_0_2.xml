@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="javaee-api-8.0-2">
-    <CLASSES>
-      <root url="jar://E:/apache-tomee-plume-8.0.0/lib/javaee-api-8.0-2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

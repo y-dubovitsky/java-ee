@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib>
+    <tlib-version>l.0</tlib-version>
+    <jsp-version>2.3</jsp-version>
+    <short-name>tags</short-name>
+    <!--static tag-->
+    <tag>
+        <name>static</name>
+        <tag-class>dev.tag.jsp1.StaticTag</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+    <!--What is the purpose of EVAL_BODY_AGAIN, SKIP_BODY and EVAL_BODY_INCLUDE-->
+    <tag>
+        <name>doStart</name>
+        <tag-class>dev.tag.jsp1.DoStartTagUse</tag-class>
+        <body-content>tagdependent</body-content>
+    </tag>
+    <!--Attribute tag-->
+    <tag>
+        <name>attr</name>
+        <tag-class>dev.tag.jsp1.AttrTag</tag-class>
+        <body-content>tagdependent</body-content>
+        <attribute>
+            <name>var</name>
+            <type>java.lang.Boolean</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue> <!--means Runtime Expression Value. It means the attribute can support scriptlet values.-->
+        </attribute>
+    </tag>
+    <!--HTag-->
+    <tag>
+        <name>h</name>
+        <tag-class>dev.tag.jsp1.HTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>type</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <!--SkipJspPageTag-->
+    <tag>
+        <name>skip</name>
+        <tag-class>dev.tag.jsp1.SkipJspPageTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

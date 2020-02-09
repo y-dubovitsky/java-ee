@@ -85,15 +85,15 @@
     <!-- Error page -->
     <error-page>
         <exception-type>javax.servlet.ServletException</exception-type>
-        <location>/WEB-INF/jsp/ErrorPage.jsp</location>
+        <location>/WEB-INF/jsp/ee/ErrorPage.jsp</location>
     </error-page>
 
     <!-- JSP Config -->
     <jsp-config>
         <jsp-property-group>
             <url-pattern>/ee.jsp/page/Page.ee.jsp</url-pattern>
-            <include-prelude>/WEB-INF/jsp/page/Header.jsp</include-prelude>
-            <include-coda>/WEB-INF/jsp/page/Footer.jsp</include-coda>
+            <include-prelude>/WEB-INF/jsp/ee/page/Header.jsp</include-prelude>
+            <include-coda>/WEB-INF/jsp/ee/page/Footer.jsp</include-coda>
         </jsp-property-group>
     </jsp-config>
 
@@ -129,8 +129,8 @@
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
-            <form-login-page>/WEB-INF/jsp/auth/LoginForm.jsp</form-login-page>
-            <form-error-page>/WEB-INF/jsp/ErrorPage.jsp</form-error-page>
+            <form-login-page>/WEB-INF/jsp/ee/auth/LoginForm.jsp</form-login-page>
+            <form-error-page>/WEB-INF/jsp/ee/ErrorPage.jsp</form-error-page>
         </form-login-config>
     </login-config>
 
