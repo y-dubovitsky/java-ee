@@ -45,4 +45,33 @@
         <tag-class>dev.tag.jsp1.SkipJspPageTag</tag-class>
         <body-content>empty</body-content>
     </tag>
+    <!--SetDefaultParamTag-->
+    <tag>
+        <name>SetDefaultParamTag</name>
+        <tag-class>dev.tag.jsp1.SetDefaultParamTag</tag-class>
+        <body-content>tagdependent</body-content>
+        <attribute>
+            <name>attr</name>
+            <type>java.lang.String</type>
+            <required>false</required>
+        </attribute>
+    </tag>
+    <!--LoopTag-->
+    <tag>
+        <name>LoopTag</name>
+        <tag-class>dev.tag.jsp1.LoopTag</tag-class>
+        <body-content>tagdependent</body-content>
+        <attribute>
+            <name>loop</name>
+            <type>java.lang.Integer</type>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <!--ChangeBodyContentTag-->
+    <tag>
+        <name>ChangeBodyContentTag</name>
+        <tag-class>dev.tag.jsp1.ChangeBodyContentTag</tag-class>
+        <body-content>tagdependent</body-content>
+    </tag>
 </taglib>

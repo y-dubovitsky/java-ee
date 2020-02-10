@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib>
+    <tlib-version>l.0</tlib-version>
+    <jsp-version>2.3</jsp-version>
+    <short-name>tags</short-name>
+
+    <!--StaticTag2-->
+    <tag>
+        <name>StaticTag2</name>
+        <tag-class>dev.tag.jsp2.StaticTag2</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+    <!--AttrTag2-->
+    <tag>
+        <name>AttrTag2</name>
+        <tag-class>dev.tag.jsp2.AttrTag2</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>attr</name>
+            <type>java.lang.Integer</type>
+            <required>false</required>
+        </attribute>
+    </tag>
+    <!--HTag2-->
+    <tag>
+        <name>HTag2</name>
+        <tag-class>dev.tag.jsp2.HTag2</tag-class>
+        <body-content>tagdependent</body-content>
+    </tag>
+    <!--LoopTag2-->
+    <tag>
+        <name>LoopTag2</name>
+        <tag-class>dev.tag.jsp2.LoopTag2</tag-class>
+        <body-content>tagdependent</body-content>
+        <attribute>
+            <name>iterate</name>
+            <type>java.lang.Integer</type>
+            <required>false</required>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ChangeBodyContentTag2</name>
+        <tag-class>dev.tag.jsp2.ChangeBodyContentTag2</tag-class>
+        <body-content>tagdependent</body-content>
+    </tag>
+</taglib>
