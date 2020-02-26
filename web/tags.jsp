@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" trimDirectiveWhitespaces="true" %>
-<%@taglib prefix="java-tag" uri="/WEB-INF/tags.tld"%>
-<%@taglib prefix="java2-tag" uri="/WEB-INF/tags2.tld" %>
+<%@taglib prefix="java-tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@taglib prefix="java2-tag" uri="/WEB-INF/tags/tags2.tld" %>
 <%@ taglib prefix="tag-files" tagdir="/WEB-INF/tags" %>
 <!doctype html>
 <html lang="en">
@@ -29,6 +29,11 @@
             .tag-file {
                 border: 1px cornflowerblue solid;
                 background-color: gainsboro;
+                margin: 20px;
+            }
+            .work {
+                border: 1px peachpuff solid;
+                background-color: springgreen;
                 margin: 20px;
             }
         </style>
