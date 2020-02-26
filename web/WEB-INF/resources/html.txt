@@ -1,1 +1,0 @@
-[2019-11-14 11:58:25,377] Artifact java_ee:war exploded: Artifact is deployed successfully

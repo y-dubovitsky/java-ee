@@ -38,6 +38,7 @@
             <required>false</required>
         </attribute>
     </tag>
+    <!--ChangeBodyContentTag2-->
     <tag>
         <name>ChangeBodyContentTag2</name>
         <tag-class>dev.tag.jsp2.ChangeBodyContentTag2</tag-class>

@@ -1,16 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 09.11.2019
-  Time: 20:34
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>$Title$</title>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
   </head>
+
   <body>
-  $END$
+    <script src="js/scripts.js"></script>
   </body>
 </html>
